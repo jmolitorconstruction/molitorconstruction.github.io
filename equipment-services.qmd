@@ -30,13 +30,13 @@ Need equipment to finish your project? With competitive pricing, our equipment c
 <!-- </div> -->
 <!-- ::: -->
 
-::: {.g-col-6}
+::: {.g-col-12 .g-col-md-6}
 <div style="text-align: center;">
 <img src="media/bobcat-420-500.jpg" alt="Skid Steer" style="width:90%;border-radius:5px;border: 5px solid #212122">
 </div>
 :::
 
-::: {.g-col-6}
+::: {.g-col-12 .g-col-md-6}
 <div style="position: relative;">
 <p style="font-size:180%;text-align:center;padding-left:5%;"><strong>Bobcat Services</strong></p>
 <p style="text-align:justify;font-size:130%;padding-top:10%;padding-left:5%;">
