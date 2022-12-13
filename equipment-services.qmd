@@ -1,0 +1,65 @@
+<!-- Allow for insertion of Bootstrap icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+
+<strong style="font-size:200%;">Equipment Services</strong>
+
+::: {.grid}
+
+::: {.g-col-12}
+<p style="font-size:130%;text-align:justify;">
+Need equipment to get your project done? Let us help you help yourself. Our equipment can help get the job done, for just a fraction of the price of local rental locations!
+</p>
+<hr></hr>
+:::
+
+<!-- ::: {.g-col-5} -->
+<!-- <div> -->
+<!-- <img src="new-scaled.jpg"></img> -->
+<!-- </div> -->
+<!-- ::: -->
+
+<!-- ::: {.g-col-3} -->
+<!-- <div> -->
+<!-- <img src="existing.jpeg" style="height:275px;width=auto;text-align:center;display: block;margin-left: auto;margin-right: auto;"></img> -->
+<!-- </div> -->
+<!-- ::: -->
+
+<!-- ::: {.g-col-4} -->
+<!-- <div> -->
+<!-- <img src="existing-deck.jpeg" style="height:275px;width=auto;"></img> -->
+<!-- </div> -->
+<!-- ::: -->
+
+::: {.g-col-6}
+<div style="text-align: center;">
+<img src="bobcat-420-500.jpg" alt="Skid Steer" style="width:90%;border-radius:5px;border: 5px solid #212122">
+</div>
+:::
+
+::: {.g-col-6}
+<div style="position: relative;">
+<p style="font-size:180%;text-align:center;padding-left:5%;"><strong>Bobcat Services</strong></p>
+<p style="text-align:justify;font-size:130%;padding-top:10%;padding-left:5%;">
+With our tracked skid steer, we can handle projects such as rough grading,
+material spreading, creating gravel pads for sheds, gravel driveway topping,
+and post hole digging.
+</p>
+<!-- <hr style="position: absolute;left: 0;bottom: -9%;width: 100%;margin: 0;"></hr> -->
+</div>
+:::
+
+::: {.g-col-12}
+<hr></hr>
+<p style="text-align:center;font-size:130%;">
+<a href="https://molitorconstruction.net/contact" style="text-decoration:none;">
+<strong>
+Contact us now
+</strong>
+</a>
+<strong>
+for more details, or for a quote on your project!
+</strong>
+</p>
+:::
+
+:::

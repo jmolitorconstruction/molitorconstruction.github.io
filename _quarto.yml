@@ -1,0 +1,41 @@
+project:
+  type: website
+
+website:
+  title: "Construction and Handyman Services"
+  search: false
+  site-url: https://molitorconstruction.net/
+  repo-url: https://github.com/jmolitorconstruction/molitorconstruction.github.io
+  # google-analytics: "UA-154890377-1"
+  favicon: "logo-small.png"
+  navbar:
+    title: "<img class='icon-navbar' src='logo-small.png'>"
+    background: "#212122"
+    right:
+      - href: index.qmd
+        text: "<strong><span style='font-size:110%;'>About</span></strong>"
+      - href: outdoor-structures.qmd
+        text: "<strong><span style='font-size:110%;'>Outdoor Structures</span></strong>"
+      - href: interior.qmd
+        text: "<strong><span style='font-size:110%;'>Interior</span></strong>"
+      - href: equipment-services.qmd
+        text: "<strong><span style='font-size:110%;'>Equipment Services</span></strong>"
+      - href: contact.qmd
+        text: "<strong><span style='font-size:110%;'>Contact</span></strong>"
+    search: false
+    pinned: true
+    collapse-below: md
+  page-footer:
+    background: "#212122"
+    center:
+      - text: "© 2022 Molitor Construction"
+
+format:
+  html:
+    theme: darkly-custom.scss
+    css: styles.css
+    toc: true
+    page-layout: full
+
+
+

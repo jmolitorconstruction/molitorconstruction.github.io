@@ -1,0 +1,7 @@
+/.quarto/
+.DS_Store
+_site
+renv
+renv.lock
+*.Rproj
+.Rproj.user
