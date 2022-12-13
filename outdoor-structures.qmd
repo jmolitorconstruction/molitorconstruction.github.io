@@ -32,7 +32,7 @@ Outdoor space improvements not only give you a relaxing spot to enjoy a summer e
 
 ::: {.g-col-6}
 <div>
-<img src="upgraded-deck-600-400.jpg" alt="Deck Improvement" style="width:100%;border-radius:5px;border: 5px solid #212122">
+<img src="media/upgraded-deck-600-400.jpg" alt="Deck Improvement" style="width:100%;border-radius:5px;border: 5px solid #212122">
 </div>
 :::
 
@@ -58,7 +58,7 @@ We can help you design a brand new deck, pergola or other patio structures that 
 
 ::: {.g-col-6}
 <div>
-<img src="new-deck-600-400.jpg" alt="New Deck" style="width:100%;border-radius:5px;border: 5px solid #212122">
+<img src="media/new-deck-600-400.jpg" alt="New Deck" style="width:100%;border-radius:5px;border: 5px solid #212122">
 </div>
 :::
 

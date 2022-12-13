@@ -32,7 +32,7 @@ We offer a wide range of interior renovation services including bathroom and kit
 
 ::: {.g-col-6}
 <div>
-<img src="bathroom-600-400.jpg" alt="Bathroom Renovation" style="width:100%;border-radius:5px;border: 5px solid #212122">
+<img src="media/bathroom-600-400.jpg" alt="Bathroom Renovation" style="width:100%;border-radius:5px;border: 5px solid #212122">
 </div>
 :::
 
@@ -59,7 +59,7 @@ into a getaway.
 
 ::: {.g-col-6}
 <div>
-<img src="bathroom-600-400.jpg" alt="Bathroom Renovation" style="width:100%;border-radius:5px;border: 5px solid #212122">
+<img src="media/basement-600-400.jpg" alt="Basement Renovation" style="width:100%;border-radius:5px;border: 5px solid #212122">
 </div>
 :::
 
