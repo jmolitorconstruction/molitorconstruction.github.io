@@ -1,5 +1,5 @@
 /* css styles */
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .text-shell {
     font-size: 16px;
     text-align: justify;
@@ -7,7 +7,7 @@
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 641px) {
   .text-shell {
     font-size: 130%;
     text-align: justify;
@@ -15,14 +15,14 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .contact-text-shell {
     font-size: 16px;
     text-align: center;
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 641px) {
   .contact-text-shell {
     font-size: 130%;
     text-align: center;
@@ -51,7 +51,7 @@
   text-align: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .about-text {
     font-size:16px;
     text-align: justify;
@@ -59,7 +59,7 @@
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 641px) {
   .about-text {
     font-size:130%;
     padding-top:20%;
