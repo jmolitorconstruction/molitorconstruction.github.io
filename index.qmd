@@ -1,0 +1,43 @@
+<!-- Allow for insertion of Bootstrap icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+
+::: {.grid}
+
+::: {.g-col-4}
+<div>
+<p class="icon-box">
+<img class="icon-img" src="logo-large.png" alt="profile pic">
+<hr></hr>
+</p>
+<p class="logo-title">
+<strong>Construction and Handyman Services</strong><br>
+<a href="https://www.google.com/maps/@43.5357742,-89.3184131,14z" target="_blank"><i class="bi-geo-alt-fill"></i></a>
+Pardeeville, WI
+</p>
+</div>
+:::
+
+::: {.g-col-8}
+
+<!-- Nested grid: split the remaining space evenly into three columns -->
+
+::: {.grid}
+
+::: {.g-col-12}
+<p class="about-text">
+Molitor Construction is a licensed and insured general contractor in
+Pardeeville, WI. We specialize in decks and outdoor spaces, but also offer
+multiple interior construction and remodeling services. We serve Columbia and
+Dane Counties and surrounding areas. Follow along or get in touch
+with us on our
+<a href="https://molitorconstruction.net/contact" style="text-decoration:none;"><strong>contact page</strong></a>!
+</p>
+:::
+
+:::
+
+<!-- End nested grid -->
+
+:::
+
+:::

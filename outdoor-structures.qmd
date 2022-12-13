@@ -1,0 +1,79 @@
+<!-- Allow for insertion of Bootstrap icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+
+<strong style="font-size:200%;">Decks, Pergolas, and Outdoor Structures</strong>
+
+::: {.grid}
+
+::: {.g-col-12}
+<p style="font-size:130%;text-align:justify;">
+Outdoor space improvements not only give you a relaxing spot to enjoy a summer evening, but are one of the most affordable-per-square-foot ways to increase your home's curb appeal and value. 
+</p>
+<hr></hr>
+:::
+
+<!-- ::: {.g-col-5} -->
+<!-- <div> -->
+<!-- <img src="new-scaled.jpg"></img> -->
+<!-- </div> -->
+<!-- ::: -->
+
+<!-- ::: {.g-col-3} -->
+<!-- <div> -->
+<!-- <img src="existing.jpeg" style="height:275px;width=auto;text-align:center;display: block;margin-left: auto;margin-right: auto;"></img> -->
+<!-- </div> -->
+<!-- ::: -->
+
+<!-- ::: {.g-col-4} -->
+<!-- <div> -->
+<!-- <img src="existing-deck.jpeg" style="height:275px;width=auto;"></img> -->
+<!-- </div> -->
+<!-- ::: -->
+
+::: {.g-col-6}
+<div>
+<img src="upgraded-deck-600-400.jpg" alt="Deck Improvement" style="width:100%;border-radius:5px;border: 5px solid #212122">
+</div>
+:::
+
+::: {.g-col-6}
+<div style="position: relative;">
+<p style="font-size:180%;text-align:center;padding-left:5%;"><strong>Existing Structures</strong></p>
+<p style="text-align:justify;font-size:130%;padding-top:5%;padding-left:5%;">
+Have an old deck that needs a makeover? Let us refresh your old deck with PVC decking, which will require almost no maintenance and far outlast your outdated wood deck. Replacing existing railings with a metal post and cable system, glass panels, or decorative steel are great ways to add flare to an existing deck.
+</p>
+<!-- <hr style="position: absolute;left: 0;bottom: -9%;width: 100%;margin: 0;"></hr> -->
+</div>
+:::
+
+::: {.g-col-6}
+<div style="position: relative;">
+<p style="font-size:180%;text-align:center;padding-right:5%;"><strong>New Structures</strong></p>
+<p style="text-align:justify;font-size:130%;padding-top:15%;padding-right:5%;">
+We can help you design a brand new deck, pergola or other patio structures that will fit your specific needs.
+</p>
+<!-- <hr style="position: absolute;left: 0;bottom: -44%;width: 100%;margin: 0;"></hr> -->
+</div>
+:::
+
+::: {.g-col-6}
+<div>
+<img src="new-deck-600-400.jpg" alt="New Deck" style="width:100%;border-radius:5px;border: 5px solid #212122">
+</div>
+:::
+
+::: {.g-col-12}
+<hr></hr>
+<p style="text-align:center;font-size:130%;">
+<a href="https://molitorconstruction.net/contact" style="text-decoration:none;">
+<strong>
+Contact us now
+</strong>
+</a>
+<strong>
+and let us know how we can bring your dreams to life!
+</strong>
+</p>
+:::
+
+:::
