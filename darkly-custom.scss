@@ -18,6 +18,7 @@ $gray-800: #303030 !default;
 $gray-900: #222 !default;
 $black:    #000 !default;
 $gray-special: #212122 !default;
+$blue-special: #AEAEAE !default;
 
 $blue:    #375a7f !default;
 $indigo:  #6610f2 !default;
@@ -38,9 +39,9 @@ $body-color:                $gray-special !default;
     @return mix($body-bg, $body-color, $weight);
 }
 
-$primary:       $blue !default;
+$primary:       $blue-special !default;
 $secondary:     body-mix(85%) !default;
-$success:       $green !default;
+$success:       $blue-special !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
@@ -54,7 +55,7 @@ $min-contrast-ratio:   1.9 !default;
 
 // Links
 
-$link-color:                $success !default;
+$link-color:                $blue-special !default;
 
 // Fonts
 

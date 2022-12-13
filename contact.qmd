@@ -6,7 +6,7 @@
 ::: {.g-col-4}
 <div>
 <p class="icon-box">
-<img class="icon-img" src="logo-large.png" alt="profile pic">
+<img class="icon-img" src="media/logo-large.png" alt="profile pic">
 <hr></hr>
 </p>
 <p style="text-align:center;">

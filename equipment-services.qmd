@@ -7,7 +7,7 @@
 
 ::: {.g-col-12}
 <p style="font-size:130%;text-align:justify;">
-Need equipment to get your project done? Let us help you help yourself. Our equipment can help get the job done, for just a fraction of the price of local rental locations!
+Need equipment to finish your project? With competitive pricing, our equipment can help you get the job done, and done right!
 </p>
 <hr></hr>
 :::
@@ -32,7 +32,7 @@ Need equipment to get your project done? Let us help you help yourself. Our equi
 
 ::: {.g-col-6}
 <div style="text-align: center;">
-<img src="bobcat-420-500.jpg" alt="Skid Steer" style="width:90%;border-radius:5px;border: 5px solid #212122">
+<img src="media/bobcat-420-500.jpg" alt="Skid Steer" style="width:90%;border-radius:5px;border: 5px solid #212122">
 </div>
 :::
 

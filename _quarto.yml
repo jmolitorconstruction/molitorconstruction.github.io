@@ -7,9 +7,9 @@ website:
   site-url: https://molitorconstruction.net/
   repo-url: https://github.com/jmolitorconstruction/molitorconstruction.github.io
   # google-analytics: "UA-154890377-1"
-  favicon: "logo-small.png"
+  favicon: "media/logo-small.png"
   navbar:
-    title: "<img class='icon-navbar' src='logo-small.png'>"
+    title: "<img class='icon-navbar' src='media/logo-small.png'>"
     background: "#212122"
     right:
       - href: index.qmd
@@ -33,6 +33,7 @@ website:
 format:
   html:
     theme: darkly-custom.scss
+    linkcolor: "#214ED3"
     css: styles.css
     toc: true
     page-layout: full
