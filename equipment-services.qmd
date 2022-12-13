@@ -6,7 +6,7 @@
 ::: {.grid}
 
 ::: {.g-col-12}
-<p style="font-size:130%;text-align:justify;">
+<p class="text-shell">
 Need equipment to finish your project? With competitive pricing, our equipment can help you get the job done, and done right!
 </p>
 <hr></hr>
@@ -38,8 +38,8 @@ Need equipment to finish your project? With competitive pricing, our equipment c
 
 ::: {.g-col-12 .g-col-md-6}
 <div style="position: relative;">
-<p style="font-size:180%;text-align:center;padding-left:5%;"><strong>Bobcat Services</strong></p>
-<p style="text-align:justify;font-size:130%;padding-top:10%;padding-left:5%;">
+<p style="font-size:180%;text-align:center;padding-left:2.5%;padding-right:2.5%;"><strong>Bobcat Services</strong></p>
+<p class="text-shell" style="padding-top:2%;padding-left:2.5%;padding-right:2.5%;">
 With our tracked skid steer, we can handle projects such as rough grading,
 material spreading, creating gravel pads for sheds, gravel driveway topping,
 and post hole digging.
@@ -50,7 +50,7 @@ and post hole digging.
 
 ::: {.g-col-12}
 <hr></hr>
-<p style="text-align:center;font-size:130%;">
+<p class="contact-text-shell">
 <a href="https://molitorconstruction.net/contact" style="text-decoration:none;">
 <strong>
 Contact us now

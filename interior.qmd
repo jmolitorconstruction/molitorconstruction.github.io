@@ -6,7 +6,7 @@
 ::: {.grid}
 
 ::: {.g-col-12}
-<p style="font-size:130%;text-align:justify;">
+<p class="text-shell">
 We offer a wide range of interior renovation services including bathroom and kitchen remodeling, basement finishing and much more. Our attention to detail is what transforms your house into a home!
 </p>
 <hr></hr>
@@ -38,8 +38,8 @@ We offer a wide range of interior renovation services including bathroom and kit
 
 ::: {.g-col-12 .g-col-md-6}
 <div style="position: relative;">
-<p style="font-size:180%;text-align:center;padding-left:5%;"><strong>Remodeling—Kitchen and Bath</strong></p>
-<p style="text-align:justify;font-size:130%;padding-top:2%;padding-left:5%;">
+<p style="font-size:180%;text-align:center;padding-left:2.5%;padding-right:2.5%;"><strong>Remodeling—Kitchen and Bath</strong></p>
+<p class="text-shell" style="padding-top:2%;padding-left:2.5%;padding-right:2.5%;">
 Are you outgrowing the space in your home or simply want to increase the value? Do you have unfinished basement space? If your answer is yes to either of these questions, give us a call and we can help you plan your space, add egress windows if necessary, and finish your space. We will handle all the required permits and inspections, making the process stress-free for you as the homeowner.
 </p>
 <!-- <hr style="position: absolute;left: 0;bottom: -9%;width: 100%;margin: 0;"></hr> -->
@@ -48,8 +48,8 @@ Are you outgrowing the space in your home or simply want to increase the value? 
 
 ::: {.g-col-12 .g-col-md-6}
 <div style="position: relative;">
-<p style="font-size:180%;text-align:center;padding-right:5%;"><strong>Basement Finishing</strong></p>
-<p style="text-align:justify;font-size:130%;padding-top:2%;padding-right:5%;">
+<p style="font-size:180%;text-align:center;padding-left:2.5%;padding-right:2.5%;"><strong>Basement Finishing</strong></p>
+<p class="text-shell" style="padding-top:2%;padding-left:2.5%;padding-right:2.5%;">
 From basic necessities to the most elaborate layouts, we can transform your bathroom or kitchen
 into a getaway.
 </p>
@@ -65,7 +65,7 @@ into a getaway.
 
 ::: {.g-col-12}
 <hr></hr>
-<p style="text-align:center;font-size:130%;">
+<p class="contact-text-shell">
 <a href="https://molitorconstruction.net/contact" style="text-decoration:none;">
 <strong>
 Contact us now
