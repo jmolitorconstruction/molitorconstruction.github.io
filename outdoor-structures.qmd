@@ -38,8 +38,8 @@ Outdoor space improvements not only give you a relaxing spot to enjoy a summer e
 
 ::: {.g-col-12 .g-col-md-6}
 <div style="position: relative;">
-<p style="font-size:180%;text-align:center;padding-left:5%;"><strong>Existing Structures</strong></p>
-<p style="text-align:justify;font-size:130%;padding-top:10%;padding-left:5%;">
+<p style="font-size:180%;text-align:center;padding-left:2.5%;padding-right:2.5%;"><strong>Existing Structures</strong></p>
+<p style="text-align:justify;font-size:130%;padding-top:2%;padding-left:2.5%;padding-right:2.5%;">
 Have an old deck that needs a makeover? Let us refresh your old deck with PVC decking, which will require almost no maintenance and far outlast your outdated wood deck. Replacing existing railings with a metal post and cable system, glass panels, or decorative steel are great ways to add flare to an existing deck.
 </p>
 <!-- <hr style="position: absolute;left: 0;bottom: -9%;width: 100%;margin: 0;"></hr> -->
@@ -48,8 +48,8 @@ Have an old deck that needs a makeover? Let us refresh your old deck with PVC de
 
 ::: {.g-col-12 .g-col-md-6}
 <div style="position: relative;">
-<p style="font-size:180%;text-align:center;padding-right:5%;"><strong>New Structures</strong></p>
-<p style="text-align:justify;font-size:130%;padding-top:10%;padding-right:5%;">
+<p style="font-size:180%;text-align:center;padding-left:2.5%;padding-right:2.5%;"><strong>New Structures</strong></p>
+<p style="text-align:justify;font-size:130%;padding-top:2%;padding-left:2.5%;padding-right:2.5%;">
 We can help you design a brand new deck, pergola or other patio structures that will fit your specific needs.
 </p>
 <!-- <hr style="position: absolute;left: 0;bottom: -44%;width: 100%;margin: 0;"></hr> -->
