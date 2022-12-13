@@ -3,7 +3,7 @@
 
 ::: {.grid}
 
-::: {.g-col-4}
+::: {.g-col-12 .g-col-md-4}
 <div>
 <p class="icon-box">
 <img class="icon-img" src="media/logo-large.png" alt="profile pic">
@@ -29,15 +29,15 @@
 </div>
 :::
 
-::: {.g-col-1}
+::: {.g-col-0 .g-col-md-1}
 
 :::
 
-::: {.g-col-1}
+::: {.g-col-0 .g-col-md-1}
 <div style="border-left:1px solid #212122;height:100%"></div>
 :::
 
-::: {.g-col-6}
+::: {.g-col-12 .g-col-md-6}
 <!-- <p style="font-size:180%;"><strong>Drop us a line</strong></p> -->
 <form action="https://formspree.io/f/mrgdndpl" method="POST">
   <label for="name"><strong>Name:</strong><span style="color:red;"> \*</span></label>
