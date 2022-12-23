@@ -39,7 +39,7 @@
 
 ::: {.g-col-12 .g-col-md-6}
 <!-- <p style="font-size:180%;"><strong>Drop us a line</strong></p> -->
-<form action="https://formspree.io/f/mrgdndpl" method="POST">
+<form action="https://formspree.io/f/xzbqpeaz" method="POST">
   <label for="name"><strong>Name:</strong><span style="color:red;"> \*</span></label>
   <input type="text" id="name" name="user_name" placeholder="John Doe"><br>
   <label for="phone"><strong>Phone:</strong><span style="color:red;"> </span></label>
