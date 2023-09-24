@@ -30,13 +30,13 @@
 }
 
 .icon-box {
-  padding-top:20%;
+  padding-top: 35%;
   text-align: center;
 }
 
 .icon-img {
-  border-radius: 50%;
-  width: 80%;
+  border-radius: 0%;
+  width: 100%;
   height: auto;
   min-width: 250px;
 }
@@ -132,7 +132,7 @@ input[type=submit]:hover {
 /* Add a background color and some padding around the form */
 .container {
   border-radius: 5px;
-  background-color: #212122;
+  background-color: #1B1B1C;
   padding: 20px;
 }
 

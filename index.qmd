@@ -6,11 +6,11 @@
 ::: {.g-col-12 .g-col-md-4}
 <div>
 <p class="icon-box">
-<img class="icon-img" src="media/logo-large.png" alt="profile pic">
+<img class="icon-img" src="media/new-logo-cropped.png" alt="profile pic">
 <!-- <hr></hr> -->
 </p>
 <p class="logo-title">
-<strong>Construction and Handyman Services</strong><br>
+<strong>Construction and Remodeling Services</strong><br>
 <a href="https://www.google.com/maps/@43.5357742,-89.3184131,14z" target="_blank"><i class="bi-geo-alt-fill"></i></a>
 Pardeeville, WI
 </p>
@@ -27,7 +27,7 @@ Pardeeville, WI
 
 ::: {.g-col-12 .g-col-md-6}
 
-<div style="border:thin;height:100%;">
+<div style="border:thin;height:100%;padding-bottom:25%">
 <p class="about-text">
 Molitor Construction is a licensed and insured general contractor in
 Pardeeville, WI. We specialize in decks and outdoor spaces, but also offer

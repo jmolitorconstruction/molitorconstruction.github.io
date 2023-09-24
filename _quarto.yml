@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Construction and Handyman Services"
+  title: "Construction and Remodeling Services"
   search: false
   site-url: https://molitorconstruction.net/
   repo-url: https://github.com/jmolitorconstruction/molitorconstruction.github.io
@@ -10,7 +10,7 @@ website:
   favicon: "media/logo-small.png"
   navbar:
     title: "<img class='icon-navbar' src='media/logo-small.png'>"
-    background: "#212122"
+    background: "#1B1B1C"
     right:
       - href: index.qmd
         text: "<strong><span style='font-size:110%;'>About</span></strong>"
@@ -18,15 +18,15 @@ website:
         text: "<strong><span style='font-size:110%;'>Outdoor Structures</span></strong>"
       - href: interior.qmd
         text: "<strong><span style='font-size:110%;'>Interior</span></strong>"
-      - href: equipment-services.qmd
-        text: "<strong><span style='font-size:110%;'>Equipment Services</span></strong>"
+      - href: gallery.qmd
+        text: "<strong><span style='font-size:110%;'>Gallery</span></strong>"
       - href: contact.qmd
         text: "<strong><span style='font-size:110%;'>Contact</span></strong>"
     search: false
     pinned: true
     collapse-below: md
   page-footer:
-    background: "#212122"
+    background: "#1B1B1C"
     center:
       - text: "© 2022 Molitor Construction"
 
