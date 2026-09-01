@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Home Build — Molitor Construction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.process-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; }
+.process-step { font-family: var(--ff-display); font-weight: 800; font-size: 40px; color: var(--blue-light); line-height: 1; margin-bottom: 10px; }
+.process-title { font-family: var(--ff-display); font-weight: 700; font-size: 20px; margin-bottom: 8px; }
+.process-desc { font-size: 14px; color: var(--text-sub); line-height: 1.65; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+@media (max-width: 760px) { .process-grid { grid-template-columns: 1fr; } .two-col { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="../index.html" class="nav-logo">
+      <div class="logo-mark">M</div>
+      <div><div class="logo-name">Molitor Construction</div><div class="logo-tag">Wisconsin Builder</div></div>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li class="has-drop">
+          <a href="../services.html" class="active">Services</a>
+          <ul class="drop-menu">
+            <li><a href="new-home-build.html">New Home Build</a></li>
+            <li><a href="remodeling.html">Remodeling</a></li>
+            <li><a href="decks-outdoor.html">Deck &amp; Outdoor Living</a></li>
+          </ul>
+        </li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../gallery.html">Gallery</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-end">
+      <a href="tel:+16086175283" class="nav-phone">608-617-5283</a>
+      <a href="../contact.html" class="btn btn-primary" style="padding:9px 18px;font-size:13px;">Get a Quote</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a><span>/</span>
+      <a href="../services.html">Services</a><span>/</span>
+      <span>New Home Build</span>
+    </div>
+    <div class="page-hero-content">
+      <p class="page-hero-eyebrow">Custom Home Building</p>
+      <h1 class="page-hero-title">New Home Build</h1>
+      <p class="page-hero-body">Crafting unique, custom homes in Wisconsin that reflect your personal style — built with quality workmanship, attention to detail, and a commitment to doing things right.</p>
+      <a href="../contact.html" class="btn btn-primary">Get a Free Quote</a>
+    </div>
+    <!-- background-image1.webp -->
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section-pad" style="background:var(--surface)">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <p class="eyebrow">Custom Builds</p>
+        <h2 class="section-title">Your Home, Your Vision</h2>
+        <p style="font-size:15px;color:var(--text-sub);line-height:1.75;margin:14px 0 16px;">
+          At Molitor Construction LLC, we pride ourselves on crafting unique, custom homes that reflect your personal style and meet your specific needs. Our experienced team will guide you through every stage of the process, from design to completion.
+        </p>
+        <p style="font-size:15px;color:var(--text-sub);line-height:1.75;margin-bottom:24px;">
+          Based in Pardeeville and serving south-central Wisconsin, we bring local expertise and a personal commitment to every build. No two homes are the same — and that's exactly the point.
+        </p>
+        <ul class="feature-list">
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div class="feature-text"><strong>Personalized Design</strong><span>A customized floor plan built around your lifestyle.</span></div>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div class="feature-text"><strong>Quality Materials</strong><span>Top-notch materials chosen for durability and beauty.</span></div>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div class="feature-text"><strong>Full Project Management</strong><span>Permits, schedules, subcontractors — all handled for you.</span></div>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div class="feature-text"><strong>Clear Communication</strong><span>You'll know where your project stands at every step.</span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="ph" style="aspect-ratio:4/5;border-radius:var(--radius-lg);border:none;">
+        <span class="ph-label">New Home Build Photo</span>
+        <span class="ph-file">home-building-blurb.webp</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILD PROCESS -->
+<section class="section-pad" style="background:var(--blue-light)">
+  <div class="container">
+    <div class="sec-header center">
+      <p class="eyebrow">How It Works</p>
+      <h2 class="section-title">The Build Process</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="process-step">01</div>
+        <div class="process-title">Initial Consultation</div>
+        <p class="process-desc">We meet to discuss your vision, budget, and timeline. You walk us through what you want — we listen and ask the right questions.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-step">02</div>
+        <div class="process-title">Design &amp; Planning</div>
+        <p class="process-desc">We develop a customized floor plan and finalize selections. Permits and schedules are arranged before a single board goes up.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-step">03</div>
+        <div class="process-title">Construction</div>
+        <p class="process-desc">Our crew gets to work. You're updated regularly, and we manage every subcontractor to keep the project on time and on budget.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-step">04</div>
+        <div class="process-title">Quality Checks</div>
+        <p class="process-desc">At key milestones we walk through the progress with you. Issues are caught early — not at the final walkthrough.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-step">05</div>
+        <div class="process-title">Finishing Touches</div>
+        <p class="process-desc">From trim work to final fixtures, every detail is completed to the same standard as the first nail driven.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-step">06</div>
+        <div class="process-title">Final Walkthrough</div>
+        <p class="process-desc">We walk through the completed home with you to make sure every detail meets your expectations before you move in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED SERVICES -->
+<section class="section-pad" style="background:var(--surface)">
+  <div class="container">
+    <div class="sec-header center">
+      <p class="eyebrow">Also From Molitor</p>
+      <h2 class="section-title">Explore Our Other Services</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+      <a href="decks-outdoor.html" class="svc-card" style="text-decoration:none;">
+        <div class="svc-img ph"><span class="ph-label">Deck Photo</span><span class="ph-file">image-ticker-2.webp</span></div>
+        <div class="svc-body">
+          <h3 class="svc-title">Deck &amp; Outdoor Living</h3>
+          <p class="svc-desc">Custom-built decks and outdoor spaces designed for durability, style, and outdoor enjoyment.</p>
+          <span class="btn btn-secondary" style="font-size:13px;width:fit-content;">Learn More &rarr;</span>
+        </div>
+      </a>
+      <a href="remodeling.html" class="svc-card" style="text-decoration:none;">
+        <div class="svc-img ph"><span class="ph-label">Remodeling Photo</span><span class="ph-file">remodeling-blurb2.webp</span></div>
+        <div class="svc-body">
+          <h3 class="svc-title">Remodeling</h3>
+          <p class="svc-desc">Transform unused space into a comfortable, functional extension of your home.</p>
+          <span class="btn btn-secondary" style="font-size:13px;width:fit-content;">Learn More &rarr;</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <div></div>
+    <div class="cta-right">
+      <p class="cta-eyebrow">Ready to Build?</p>
+      <h2 class="cta-h2">Let&rsquo;s design your custom home.</h2>
+      <p class="cta-body">From site prep to the final walkthrough, Molitor Construction handles every detail so you can focus on the exciting part.</p>
+      <div class="cta-btns">
+        <a href="../contact.html" class="btn btn-primary">Request a Quote</a>
+        <a href="tel:+16086175283" class="btn btn-ghost-white">Call 608-617-5283</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <div class="logo-mark" style="width:36px;height:36px;font-size:18px;">M</div>
+          <div><div class="ft-logo-name">Molitor Construction</div><div class="ft-logo-tag">Wisconsin Builder</div></div>
+        </div>
+        <p class="ft-tagline">Quality craftsmanship for remodeling and new construction projects across Wisconsin.</p>
+        <div class="ft-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">in</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+      <div>
+        <p class="ft-heading">Quick Links</p>
+        <ul class="ft-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-heading">Contact</p>
+        <div class="ft-contact-row">&#128222; <a href="tel:+16086175283">+1 608-617-5283</a></div>
+        <div class="ft-contact-row">&#9993; <a href="../contact.html">Send us a message</a></div>
+        <div class="ft-contact-row">&#128205; Pardeeville, Wisconsin</div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p>&copy; 2026 Molitor Construction LLC. All rights reserved.</p>
+      <p>Built by the Molitor family</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Molitor Construction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.team-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; text-align: center; }
+.team-photo { height: 220px; }
+.team-body { padding: 18px; }
+.team-name { font-family: var(--ff-display); font-weight: 700; font-size: 20px; margin-bottom: 4px; }
+.team-role { font-size: 13px; color: var(--text-sub); }
+.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.value-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 22px; }
+.value-icon { width: 48px; height: 48px; background: var(--blue-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 14px; }
+.value-title { font-family: var(--ff-display); font-weight: 700; font-size: 20px; margin-bottom: 8px; }
+.value-desc { font-size: 14px; color: var(--text-sub); line-height: 1.65; }
+.owner-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.cert-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
+.cert-badge { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 18px; font-size: 13px; font-weight: 600; color: var(--text-sub); }
+.cert-badge small { display: block; font-family: monospace; font-size: 9px; font-weight: 400; opacity: 0.55; }
+.area-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+.area-tag { background: var(--blue-light); color: var(--blue-deep); font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 20px; }
+@media (max-width: 900px) {
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .value-grid { grid-template-columns: 1fr 1fr; }
+  .owner-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .team-grid { grid-template-columns: 1fr; }
+  .value-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">M</div>
+      <div>
+        <div class="logo-name">Molitor Construction</div>
+        <div class="logo-tag">Wisconsin Builder</div>
+      </div>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-drop">
+          <a href="services.html">Services</a>
+          <ul class="drop-menu">
+            <li><a href="services/new-home-build.html">New Home Build</a></li>
+            <li><a href="services/remodeling.html">Remodeling</a></li>
+            <li><a href="services/decks-outdoor.html">Deck &amp; Outdoor Living</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-end">
+      <a href="tel:+16086175283" class="nav-phone">608-617-5283</a>
+      <a href="contact.html" class="btn btn-primary" style="padding:9px 18px;font-size:13px;">Get a Quote</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>About Us</span>
+    </div>
+    <div class="page-hero-content">
+      <p class="page-hero-eyebrow">Who We Are</p>
+      <h1 class="page-hero-title">About Molitor Construction</h1>
+      <p class="page-hero-body">A trusted general contractor serving south-central Wisconsin — built on honesty, integrity, and a commitment to quality craftsmanship.</p>
+    </div>
+    <!-- Hero background image placeholder -->
+    <!-- header-about-us1.webp -->
+  </div>
+</section>
+
+<!-- COMPANY OVERVIEW -->
+<section class="section-pad" style="background:var(--surface)">
+  <div class="container">
+    <div class="owner-grid">
+      <div>
+        <p class="eyebrow">Our Story</p>
+        <h2 class="section-title">Local Experience. Quality Craftsmanship.</h2>
+        <p style="font-size:16px;color:var(--text-sub);line-height:1.75;margin-top:16px;margin-bottom:16px;">
+          Molitor Construction LLC is a trusted general contractor serving south-central Wisconsin. We specialize in home building, custom decks &amp; outdoor spaces, and remodeling projects designed to improve the way you live. Every project is built with quality workmanship and attention to detail from start to finish.
+        </p>
+        <p style="font-size:16px;color:var(--text-sub);line-height:1.75;margin-bottom:16px;">
+          Based in Pardeeville, Wisconsin, we help homeowners bring their ideas to life with dependable construction services tailored to their goals. Whether you're building a new home, upgrading your outdoor living space, or remodeling an existing room, we focus on delivering results that last.
+        </p>
+        <p style="font-size:16px;color:var(--text-sub);line-height:1.75;margin-bottom:24px;">
+          At Molitor Construction LLC, we believe that a good construction experience is built on honesty, integrity, and communication. We keep you informed every step of the way — from the first conversation to the final walkthrough.
+        </p>
+        <div class="area-tags">
+          <span class="area-tag">Pardeeville, WI</span>
+          <span class="area-tag">Columbia County</span>
+          <span class="area-tag">Dane County</span>
+          <span class="area-tag">South-Central Wisconsin</span>
+        </div>
+      </div>
+      <div class="ph" style="aspect-ratio:4/5;border-radius:var(--radius-lg);border:none;">
+        <span class="ph-label">Company / Area Photo</span>
+        <span class="ph-file">wisconsin.webp</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section-pad" style="background:var(--blue-light)">
+  <div class="container">
+    <div class="sec-header center">
+      <p class="eyebrow">What Drives Us</p>
+      <h2 class="section-title">Our Core Values</h2>
+    </div>
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="value-icon">&#9679;</div>
+        <h3 class="value-title">Honesty</h3>
+        <p class="value-desc">We give you a straight answer, a fair price, and never overpromise. What we quote is what you pay — no hidden costs, no surprises.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">&#9679;</div>
+        <h3 class="value-title">Quality Craftsmanship</h3>
+        <p class="value-desc">Every nail, every board, every finish is held to a high standard. We're proud of our work and it shows in every completed project.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">&#9679;</div>
+        <h3 class="value-title">Communication</h3>
+        <p class="value-desc">You'll always know where your project stands. We keep you informed at every stage so you can relax and look forward to the result.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OWNER / TEAM -->
+<section class="section-pad" style="background:var(--surface)">
+  <div class="container">
+    <div class="sec-header center">
+      <p class="eyebrow">The Team</p>
+      <h2 class="section-title">Meet the People Behind the Work</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-photo ph" style="border-radius:0;border:none;">
+          <span class="ph-label">Owner Photo</span>
+          <span class="ph-file">Joseph-Molitor.webp</span>
+        </div>
+        <div class="team-body">
+          <div class="team-name">Joseph Molitor</div>
+          <div class="team-role">Owner &amp; General Contractor</div>
+          <p style="font-size:13px;color:var(--text-sub);margin-top:10px;line-height:1.6;">
+            At Molitor Construction, we take pride in our work and treat every project with the utmost care. As the owner of the business, I love to spend my free time with my wife and 3 kids, but I also enjoy hunting, building and problem solving.
+          </p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo ph" style="border-radius:0;border:none;">
+          <span class="ph-label">Team Member Photo</span>
+          <span class="ph-file">Max-Firari.avif</span>
+        </div>
+        <div class="team-body">
+          <div class="team-name">Max</div>
+          <div class="team-role">Crew</div>
+          <p style="font-size:13px;color:var(--text-sub);margin-top:10px;line-height:1.6;">
+            Max is trustworthy and efficient. He has lived in the Portage area his entire life. With a passion for woodworking and spending time outdoors with his wife and 3 dogs, Max brings creativity and attention to detail to every job.
+          </p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo ph" style="border-radius:0;border:none;">
+          <span class="ph-label">Team Member Photo</span>
+          <span class="ph-file">Johal.webp</span>
+        </div>
+        <div class="team-body">
+          <div class="team-name">Johal</div>
+          <div class="team-role">Crew</div>
+          <p style="font-size:13px;color:var(--text-sub);margin-top:10px;line-height:1.6;">
+            With a strong focus on reliability, attention to detail, and customer service, Johal works closely with the team to support remodeling projects, deck construction, and new home builds while maintaining the quality craftsmanship Molitor Construction is known for.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS & SERVICE AREA -->
+<section class="section-pad" style="background:var(--blue-light)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;" class="cert-owner-grid">
+      <div>
+        <p class="eyebrow">Credentials</p>
+        <h2 class="section-title">Certified &amp; Trusted</h2>
+        <p style="font-size:15px;color:var(--text-sub);line-height:1.7;margin:14px 0 22px;">
+          Molitor Construction holds certifications from leading decking material manufacturers, reflecting our commitment to quality installation and materials.
+        </p>
+        <div class="cert-row">
+          <div class="cert-badge">
+            Fiberon Certified
+            <small>Fiberon-Certified.webp</small>
+          </div>
+          <div class="cert-badge">
+            Deckorators Certified
+            <small>Deckorators-Certified.webp</small>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Where We Work</p>
+        <h2 class="section-title">Service Area</h2>
+        <p style="font-size:15px;color:var(--text-sub);line-height:1.7;margin:14px 0 22px;">
+          Based in Pardeeville, we serve homeowners across south-central Wisconsin including Columbia and Dane Counties and surrounding communities.
+        </p>
+        <div class="area-tags">
+          <span class="area-tag">Pardeeville</span>
+          <span class="area-tag">Portage</span>
+          <span class="area-tag">Sun Prairie</span>
+          <span class="area-tag">Rio</span>
+          <span class="area-tag">Madison</span>
+          <span class="area-tag">Surrounding Areas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <div></div>
+    <div class="cta-right">
+      <p class="cta-eyebrow">Ready to Start Your Project?</p>
+      <h2 class="cta-h2">Let&rsquo;s build something great together.</h2>
+      <p class="cta-body">From remodeling to full-scale new construction, Molitor Construction delivers dependable craftsmanship built to last.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        <a href="tel:+16086175283" class="btn btn-ghost-white">Call 608-617-5283</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <div class="logo-mark" style="width:36px;height:36px;font-size:18px;">M</div>
+          <div><div class="ft-logo-name">Molitor Construction</div><div class="ft-logo-tag">Wisconsin Builder</div></div>
+        </div>
+        <p class="ft-tagline">Quality craftsmanship for remodeling and new construction projects across Wisconsin.</p>
+        <div class="ft-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">in</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+      <div>
+        <p class="ft-heading">Quick Links</p>
+        <ul class="ft-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-heading">Contact</p>
+        <div class="ft-contact-row">&#128222; <a href="tel:+16086175283">+1 608-617-5283</a></div>
+        <div class="ft-contact-row">&#9993; <a href="contact.html">Send us a message</a></div>
+        <div class="ft-contact-row">&#128205; Pardeeville, Wisconsin</div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p>&copy; 2026 Molitor Construction LLC. All rights reserved.</p>
+      <p>Built by the Molitor family</p>
+    </div>
+  </div>
+</footer>
+<script>
+document.querySelector('.hamburger').addEventListener('click', function() {
+  alert('Mobile navigation — full implementation coming with complete site build.');
+});
+</script>
+</body>
+</html>

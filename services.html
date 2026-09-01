@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Molitor Construction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.service-row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-bottom: 72px; }
+.service-row:last-child { margin-bottom: 0; }
+.service-row.reverse .service-img-col { order: 2; }
+.service-row.reverse .service-text-col { order: 1; }
+.service-img-col .ph { aspect-ratio: 4/3; border-radius: var(--radius-lg); border: none; }
+.service-text-col .eyebrow { margin-bottom: 6px; }
+.service-text-col .section-title { margin-bottom: 14px; }
+.service-body-text { font-size: 15px; color: var(--text-sub); line-height: 1.75; margin-bottom: 20px; }
+@media (max-width: 760px) {
+  .service-row { grid-template-columns: 1fr; }
+  .service-row.reverse .service-img-col { order: 0; }
+  .service-row.reverse .service-text-col { order: 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">M</div>
+      <div><div class="logo-name">Molitor Construction</div><div class="logo-tag">Wisconsin Builder</div></div>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-drop">
+          <a href="services.html" class="active">Services</a>
+          <ul class="drop-menu">
+            <li><a href="services/new-home-build.html">New Home Build</a></li>
+            <li><a href="services/remodeling.html">Remodeling</a></li>
+            <li><a href="services/decks-outdoor.html">Deck &amp; Outdoor Living</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-end">
+      <a href="tel:+16086175283" class="nav-phone">608-617-5283</a>
+      <a href="contact.html" class="btn btn-primary" style="padding:9px 18px;font-size:13px;">Get a Quote</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>Services</span>
+    </div>
+    <div class="page-hero-content">
+      <p class="page-hero-eyebrow">What We Do</p>
+      <h1 class="page-hero-title">Our Construction Services</h1>
+      <p class="page-hero-body">Molitor Construction LLC provides high-quality construction services tailored to your needs — from custom home builds to beautiful outdoor living spaces and interior transformations.</p>
+    </div>
+    <!-- header-about-us.webp -->
+  </div>
+</section>
+
+<!-- SERVICES OVERVIEW -->
+<section class="section-pad" style="background:var(--surface)">
+  <div class="container">
+
+    <!-- New Home Build -->
+    <div class="service-row">
+      <div class="service-img-col">
+        <div class="ph"><span class="ph-label">New Home Build Photo</span><span class="ph-file">Custom-Home-Building-Services-1.webp</span></div>
+      </div>
+      <div class="service-text-col">
+        <p class="eyebrow">Service 01</p>
+        <h2 class="section-title">New Home Build</h2>
+        <p class="service-body-text">At Molitor Construction LLC, we pride ourselves on crafting unique, custom homes that reflect your personal style and meet your specific needs. Our experienced team will guide you through every stage of the process, from design to completion.</p>
+        <ul class="feature-list" style="margin-bottom:22px;">
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div class="feature-text"><strong>Personalized Design</strong><span>Work closely with our designers to create a customized floor plan that fits your lifestyle.</span></div>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div class="feature-text"><strong>Quality Construction</strong><span>Meticulous attention to detail and top-notch materials in every aspect of your new home.</span></div>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div class="feature-text"><strong>Full Project Management</strong><span>We handle permits, schedules, and subcontractors so you can focus on the excitement of your new build.</span></div>
+          </li>
+        </ul>
+        <a href="services/new-home-build.html" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <hr style="border:none;border-top:1px solid var(--border);margin-bottom:72px;">
+
+    <!-- Decks & Outdoor Living -->
+    <div class="service-row reverse">
+      <div class="service-text-col">
+        <p class="eyebrow">Service 02</p>
+        <h2 class="section-title">Deck &amp; Outdoor Living</h2>
+        <p class="service-body-text">The perfect outdoor oasis starts with a custom deck from Molitor Construction LLC. Our skilled craftsmen will design and build a custom deck or outdoor living space that exceeds your expectations for comfort, durability, and style.</p>
+        <ul class="feature-list" style="margin-bottom:22px;">
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div class="feature-text"><strong>Custom Deck Design</strong><span>Tailored to your home's architecture and your outdoor lifestyle.</span></div>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div class="feature-text"><strong>Quality Materials</strong><span>Durable woods and low-maintenance composite materials built to withstand Wisconsin elements.</span></div>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div class="feature-text"><strong>Complete Outdoor Features</strong><span>Railings, stairs, pergolas, and integrated lighting for the perfect backyard retreat.</span></div>
+          </li>
+        </ul>
+        <a href="services/decks-outdoor.html" class="btn btn-primary">Learn More</a>
+      </div>
+      <div class="service-img-col">
+        <div class="ph"><span class="ph-label">Deck &amp; Outdoor Photo</span><span class="ph-file">Decks-Services-Pic-1.webp</span></div>
+      </div>
+    </div>
+
+    <hr style="border:none;border-top:1px solid var(--border);margin-bottom:72px;">
+
+    <!-- Remodeling -->
+    <div class="service-row">
+      <div class="service-img-col">
+        <div class="ph"><span class="ph-label">Remodeling Photo</span><span class="ph-file">Custom-Tile-Bathrooms-Pic.webp</span></div>
+      </div>
+      <div class="service-text-col">
+        <p class="eyebrow">Service 03</p>
+        <h2 class="section-title">Remodeling</h2>
+        <p class="service-body-text">Transform your existing spaces into the home of your dreams. Molitor Construction specializes in high-end interior remodeling with a focus on functional beauty and expert finishes.</p>
+        <ul class="feature-list" style="margin-bottom:22px;">
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div class="feature-text"><strong>Kitchen &amp; Bathroom Remodels</strong><span>Modernizing the most important rooms in your home with custom cabinetry, lighting, and fixtures.</span></div>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div class="feature-text"><strong>Tile Installation</strong><span>Specialized tile work for floors, backsplashes, and custom showers — flawless and durable.</span></div>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div class="feature-text"><strong>Interior Space Refresh</strong><span>Creating comfortable, stylish retreats and functional living areas throughout your home.</span></div>
+          </li>
+        </ul>
+        <a href="services/remodeling.html" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta" style="background:var(--blue-light)">
+  <div class="container">
+    <p class="eyebrow" style="text-align:center;margin-bottom:6px;">Ready to Begin?</p>
+    <h2 class="section-title" style="text-align:center;margin-bottom:20px;">Not Sure Which Service Fits Your Project?</h2>
+    <p style="text-align:center;color:var(--text-sub);font-size:15px;max-width:560px;margin:0 auto 24px;">Get in touch and we'll help you figure out the best approach for your goals and budget.</p>
+    <div class="bottom-cta-btns">
+      <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
+      <a href="tel:+16086175283" class="btn btn-outline">Call 608-617-5283</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <div class="logo-mark" style="width:36px;height:36px;font-size:18px;">M</div>
+          <div><div class="ft-logo-name">Molitor Construction</div><div class="ft-logo-tag">Wisconsin Builder</div></div>
+        </div>
+        <p class="ft-tagline">Quality craftsmanship for remodeling and new construction projects across Wisconsin.</p>
+        <div class="ft-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">in</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+      <div>
+        <p class="ft-heading">Quick Links</p>
+        <ul class="ft-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-heading">Contact</p>
+        <div class="ft-contact-row">&#128222; <a href="tel:+16086175283">+1 608-617-5283</a></div>
+        <div class="ft-contact-row">&#9993; <a href="contact.html">Send us a message</a></div>
+        <div class="ft-contact-row">&#128205; Pardeeville, Wisconsin</div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p>&copy; 2026 Molitor Construction LLC. All rights reserved.</p>
+      <p>Built by the Molitor family</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

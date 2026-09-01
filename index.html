@@ -1,0 +1,1096 @@
+<title>Molitor Construction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+<style>
+/* TOKENS */
+:root {
+  --navy:       #0F2A44;
+  --blue:       #1E73BE;
+  --blue-deep:  #155A96;
+  --blue-light: #EAF3FB;
+  --sky:        #C8DEF0;
+  --ground:     #F5F8FA;
+  --surface:    #FFFFFF;
+  --text:       #0F2A44;
+  --text-sub:   #5A6E82;
+  --border:     #D0E4F2;
+  --divider:    rgba(15,42,68,0.10);
+  --ff-display: 'Barlow Condensed', sans-serif;
+  --ff-body:    'DM Sans', sans-serif;
+  --pad:        clamp(52px, 8vw, 88px);
+  --radius:     8px;
+  --radius-lg:  14px;
+  --container:  1200px;
+  --gutter:     clamp(16px, 4vw, 32px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:     #071422;
+    --surface:    #0D2035;
+    --text:       #DCF0FF;
+    --text-sub:   #7AAEC8;
+    --border:     #1A3A55;
+    --divider:    rgba(220,240,255,0.08);
+    --blue-light: #0A1E30;
+    --sky:        #1A3A55;
+  }
+}
+:root[data-theme="dark"] {
+  --ground:     #071422;
+  --surface:    #0D2035;
+  --text:       #DCF0FF;
+  --text-sub:   #7AAEC8;
+  --border:     #1A3A55;
+  --divider:    rgba(220,240,255,0.08);
+  --blue-light: #0A1E30;
+  --sky:        #1A3A55;
+}
+
+/* RESET */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--ff-body);
+  background: var(--ground);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: inherit; border: none; }
+
+/* LAYOUT */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* TYPE SCALE */
+.eyebrow {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-sub);
+}
+.section-title {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.08;
+  color: var(--blue-deep);
+  text-wrap: balance;
+  margin-top: 6px;
+}
+.section-sub {
+  font-family: var(--ff-display);
+  font-weight: 600;
+  font-size: clamp(15px, 2vw, 19px);
+  color: var(--blue);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 22px;
+  border-radius: var(--radius);
+  font-family: var(--ff-body);
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn-primary   { background: var(--blue);    color: #fff; }
+.btn-primary:hover   { background: var(--blue-deep); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(30,115,190,0.3); }
+.btn-secondary { background: var(--blue-light); color: var(--navy); }
+.btn-secondary:hover { background: var(--sky); transform: translateY(-1px); }
+.btn-ghost-white { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.45); }
+.btn-ghost-white:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+
+/* PLACEHOLDER IMAGES */
+.ph {
+  background:
+    repeating-linear-gradient(-45deg, transparent, transparent 18px,
+      rgba(30,115,190,0.06) 18px, rgba(30,115,190,0.06) 36px),
+    var(--blue-light);
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-align: center;
+  padding: 12px;
+  color: var(--text-sub);
+}
+.ph-label { font-weight: 600; font-size: 12px; color: var(--text-sub); }
+.ph-file  { font-family: monospace; font-size: 10px; opacity: 0.6; }
+
+/* =====================
+   HEADER / NAV
+   ===================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--surface);
+  border-bottom: 1px solid var(--divider);
+  box-shadow: 0 2px 16px rgba(15,42,68,0.07);
+}
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  height: 66px;
+  gap: 20px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+}
+.logo-mark {
+  width: 42px; height: 42px;
+  background: var(--navy);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff-display);
+  font-weight: 800;
+  font-size: 22px;
+  color: #fff;
+  flex-shrink: 0;
+}
+.logo-words { line-height: 1.15; }
+.logo-name {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--navy);
+}
+.logo-tag {
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-sub);
+}
+nav { margin-left: auto; }
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+}
+.nav-list a {
+  display: block;
+  padding: 7px 11px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  border-radius: 6px;
+  transition: background 0.14s, color 0.14s;
+}
+.nav-list a:hover { background: var(--blue-light); color: var(--blue); }
+.has-drop { position: relative; }
+.has-drop > a::after { content: ' ▾'; font-size: 9px; opacity: 0.5; }
+.drop-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 200px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 28px rgba(15,42,68,0.12);
+  padding: 5px;
+  list-style: none;
+  z-index: 50;
+}
+.has-drop:hover .drop-menu,
+.has-drop:focus-within .drop-menu { display: block; }
+.drop-menu a { font-size: 13px; padding: 8px 12px; border-radius: 5px; white-space: nowrap; }
+.nav-end {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.nav-phone {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--navy);
+}
+.nav-phone:hover { color: var(--blue); }
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: var(--text);
+  padding: 6px;
+  line-height: 1;
+}
+
+/* =====================
+   HERO
+   ===================== */
+.hero {
+  min-height: clamp(580px, 88vh, 820px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(75deg, var(--navy) 50%, rgba(30,115,190,0.82) 50%, rgba(30,115,190,0) 64%),
+    linear-gradient(160deg, #7AA0B8 0%, #527A94 40%, #7A8C68 65%, #5E6B50 100%);
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 48px;
+  align-items: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  width: 100%;
+}
+.hero-text { position: relative; z-index: 2; }
+.hero-eyebrow {
+  font-family: var(--ff-display);
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #63C5FF;
+  margin-bottom: 10px;
+}
+.hero-h1 {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  font-size: clamp(38px, 5.5vw, 72px);
+  line-height: 1.04;
+  color: #fff;
+  text-wrap: balance;
+  margin-bottom: 18px;
+}
+.hero-h1 em { font-style: normal; color: #63C5FF; }
+.hero-body {
+  font-size: 16px;
+  color: rgba(255,255,255,0.80);
+  max-width: 460px;
+  line-height: 1.72;
+  margin-bottom: 28px;
+}
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-bottom: 24px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.88);
+}
+.hero-stars { color: #FFD23F; letter-spacing: -1px; }
+.hero-panel {
+  position: relative;
+  z-index: 2;
+  background: rgba(245,248,250,0.93);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255,255,255,0.35);
+  padding: 26px;
+  box-shadow: 0 20px 56px rgba(15,42,68,0.28);
+}
+.panel-title {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--navy);
+}
+.panel-sub { font-size: 13px; color: var(--text-sub); margin: 3px 0 16px; }
+.form-ph {
+  background: var(--blue-light);
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 28px 16px;
+  text-align: center;
+  color: var(--text-sub);
+  font-size: 12px;
+}
+.form-ph strong { display: block; font-size: 14px; margin-bottom: 6px; color: var(--text); }
+.form-ph code { font-size: 10px; background: rgba(0,0,0,0.06); padding: 2px 5px; border-radius: 3px; }
+
+/* =====================
+   SERVICES
+   ===================== */
+.services-sec {
+  padding: var(--pad) 0;
+  background: var(--surface);
+}
+.sec-header { text-align: center; margin-bottom: 44px; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.svc-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(15,42,68,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.svc-card:hover { box-shadow: 0 10px 32px rgba(30,115,190,0.13); transform: translateY(-3px); }
+.svc-img { height: 196px; flex-shrink: 0; }
+.svc-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+.svc-icon {
+  width: 38px; height: 38px;
+  background: var(--blue-light);
+  border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px;
+  margin-bottom: 11px;
+  flex-shrink: 0;
+}
+.svc-title {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text);
+  margin-bottom: 7px;
+}
+.svc-desc { font-size: 14px; color: var(--text-sub); line-height: 1.65; flex: 1; margin-bottom: 16px; }
+
+/* =====================
+   ABOUT
+   ===================== */
+.about-sec {
+  padding: var(--pad) 0;
+  background: var(--blue-light);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.about-body-text { font-size: 15px; color: var(--text-sub); line-height: 1.72; margin: 14px 0 22px; }
+.check-list { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 26px; }
+.check-list li { display: flex; align-items: flex-start; gap: 9px; font-size: 15px; font-weight: 500; }
+.chk {
+  width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px;
+  background: var(--blue);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 10px; font-weight: 700;
+}
+.cert-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+.cert-badge {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 9px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+.cert-badge small { display: block; font-family: monospace; font-size: 9px; opacity: 0.55; font-weight: 400; }
+
+/* =====================
+   BEFORE / AFTER SLIDER
+   ===================== */
+.ba {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 14px 44px rgba(15,42,68,0.16);
+  aspect-ratio: 4/3;
+  user-select: none;
+}
+.ba-after, .ba-before {
+  position: absolute;
+  inset: 0;
+}
+.ba-before { clip-path: inset(0 50% 0 0); }
+.ba-lbl {
+  position: absolute;
+  bottom: 10px;
+  padding: 0 12px;
+  left: 0; right: 0;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 3;
+}
+.ba-lbl span {
+  background: rgba(15,42,68,0.70);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.ba-line {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  pointer-events: none;
+}
+.ba-line::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px; height: 34px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.22);
+}
+.ba-range {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 5;
+  -webkit-appearance: none;
+}
+
+/* =====================
+   REVIEWS
+   ===================== */
+.reviews-sec { padding: var(--pad) 0; background: var(--surface); }
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 38px;
+}
+.rv-card {
+  background: var(--ground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+}
+.rv-stars { color: #F59E0B; font-size: 15px; margin-bottom: 11px; }
+.rv-text { font-size: 14px; color: var(--text-sub); line-height: 1.7; font-style: italic; margin-bottom: 14px; }
+.rv-author { display: flex; align-items: center; gap: 10px; }
+.rv-av {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 13px; flex-shrink: 0;
+}
+.rv-name { font-weight: 600; font-size: 13px; }
+.rv-date { font-size: 11px; color: var(--text-sub); }
+.reviews-note {
+  margin-top: 22px;
+  padding: 11px 16px;
+  background: var(--blue-light);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  font-size: 12px;
+  color: var(--text-sub);
+  text-align: center;
+}
+
+/* =====================
+   CTA BANNER
+   ===================== */
+.cta-banner {
+  padding: var(--pad) 0;
+  overflow: hidden;
+  background:
+    linear-gradient(-75deg, var(--navy) 52%, rgba(15,42,68,0) 52%),
+    linear-gradient(160deg, #5B7A8A 0%, #3D6070 45%, #7A8C68 100%);
+}
+.cta-inner {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 48px;
+  align-items: center;
+}
+.cta-right { text-align: right; }
+.cta-eyebrow {
+  font-family: var(--ff-display);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(234,243,251,0.65);
+  margin-bottom: 8px;
+}
+.cta-h2 {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  font-size: clamp(26px, 4vw, 42px);
+  color: #fff;
+  line-height: 1.1;
+  text-wrap: balance;
+  margin-bottom: 12px;
+}
+.cta-body { font-size: 15px; color: rgba(234,243,251,0.72); line-height: 1.65; margin-bottom: 22px; }
+.cta-btns { display: flex; gap: 11px; justify-content: flex-end; flex-wrap: wrap; }
+
+/* =====================
+   GALLERY TICKER
+   ===================== */
+.gallery-sec { padding: var(--pad) 0; background: var(--surface); overflow: hidden; }
+.gallery-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.gallery-body { font-size: 14px; color: var(--text-sub); line-height: 1.7; margin: 12px 0 20px; }
+.rating-pill {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--blue-light);
+  border-radius: var(--radius);
+  padding: 11px 15px;
+  margin-bottom: 18px;
+}
+.rating-num { font-family: var(--ff-display); font-weight: 800; font-size: 28px; color: var(--navy); }
+.rating-stars { color: #F59E0B; font-size: 17px; }
+.rating-lbl { font-size: 11px; color: var(--text-sub); font-weight: 500; }
+.ticker-col { height: 460px; overflow: hidden; border-radius: var(--radius-lg); }
+.ticker-track { display: flex; flex-direction: column; gap: 14px; }
+.ticker-col:nth-child(2) .ticker-track { animation: t-up 22s linear infinite; }
+.ticker-col:nth-child(3) .ticker-track { animation: t-dn 22s linear infinite; }
+@keyframes t-up { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+@keyframes t-dn  { from { transform: translateY(-50%); } to { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .ticker-track { animation: none !important; } }
+.ticker-img { width: 100%; aspect-ratio: 4/3; flex-shrink: 0; border-radius: var(--radius); overflow: hidden; box-shadow: 0 3px 12px rgba(15,42,68,0.10); }
+
+/* =====================
+   BEFORE/AFTER SECTION
+   ===================== */
+.ba-sec { padding: var(--pad) 0; background: var(--blue-light); }
+.ba-sec .sec-header { margin-bottom: 36px; }
+.ba-intro { text-align: center; font-size: 15px; color: var(--text-sub); max-width: 600px; margin: 8px auto 36px; line-height: 1.7; }
+.ba-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+
+/* =====================
+   BOTTOM CTA
+   ===================== */
+.bottom-cta { padding: clamp(48px,7vw,80px) 0; background: var(--surface); text-align: center; }
+.bottom-cta .section-title { margin-bottom: 22px; }
+.bottom-cta-btns { display: flex; justify-content: center; gap: 13px; flex-wrap: wrap; }
+
+/* =====================
+   FOOTER
+   ===================== */
+.site-footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: 56px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.ft-logo-name { font-family: var(--ff-display); font-weight: 800; font-size: 18px; color: #fff; }
+.ft-logo-tag  { font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+.ft-tagline { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; margin: 10px 0 18px; max-width: 280px; }
+.ft-social { display: flex; gap: 8px; }
+.ft-social a {
+  width: 34px; height: 34px;
+  background: rgba(255,255,255,0.09);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.7);
+  transition: background 0.15s;
+}
+.ft-social a:hover { background: var(--blue); color: #fff; }
+.ft-heading {
+  font-family: var(--ff-display);
+  font-weight: 700; font-size: 12px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 14px;
+}
+.ft-links { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.ft-links a { font-size: 13px; color: rgba(255,255,255,0.60); transition: color 0.14s; }
+.ft-links a:hover { color: #fff; }
+.ft-contact-row { display: flex; align-items: flex-start; gap: 9px; margin-bottom: 9px; font-size: 13px; color: rgba(255,255,255,0.60); }
+.ft-contact-row a { color: rgba(255,255,255,0.60); transition: color 0.14s; }
+.ft-contact-row a:hover { color: #fff; }
+.footer-bar {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding: 16px 0;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.footer-bar p { font-size: 12px; color: rgba(255,255,255,0.30); }
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 960px) {
+  .hero-inner        { grid-template-columns: 1fr; }
+  .hero-panel        { max-width: 480px; }
+  .services-grid     { grid-template-columns: 1fr 1fr; }
+  .about-grid        { grid-template-columns: 1fr; }
+  .about-grid .ba    { order: -1; }
+  .reviews-grid      { grid-template-columns: 1fr 1fr; }
+  .cta-inner         { grid-template-columns: 1fr; }
+  .cta-right         { text-align: left; }
+  .cta-btns          { justify-content: flex-start; }
+  .gallery-inner     { grid-template-columns: 1fr; }
+  .ticker-col:last-child { display: none; }
+  .ba-grid           { grid-template-columns: 1fr; }
+  .footer-grid       { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .nav-list, .nav-phone { display: none; }
+  .hamburger        { display: block; margin-left: auto; }
+  .nav-end .btn     { display: none; }
+  .services-grid    { grid-template-columns: 1fr; }
+  .reviews-grid     { grid-template-columns: 1fr; }
+  .footer-grid      { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="/" class="nav-logo" aria-label="Molitor Construction home">
+      <div class="logo-mark">M</div>
+      <div class="logo-words">
+        <div class="logo-name">Molitor Construction</div>
+        <div class="logo-tag">Wisconsin Builder</div>
+      </div>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="/">Home</a></li>
+        <li class="has-drop">
+          <a href="/services.html">Services</a>
+          <ul class="drop-menu">
+            <li><a href="/services/new-home-build.html">New Home Build</a></li>
+            <li><a href="/services/remodeling.html">Remodeling</a></li>
+            <li><a href="/services/decks-outdoor.html">Deck &amp; Outdoor Living</a></li>
+          </ul>
+        </li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-end">
+      <a href="tel:+16086175283" class="nav-phone">608-617-5283</a>
+      <a href="/contact.html" class="btn btn-primary" style="padding:9px 18px;font-size:13px;">Get a Quote</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Built With Experience</p>
+      <h1 class="hero-h1">
+        Remodeling &amp;<br>
+        New Construction<br>
+        <em>Done Right.</em>
+      </h1>
+      <p class="hero-body">
+        Molitor Construction specializes in kitchens, bathrooms, basements, decks,
+        and new construction — delivering high-quality craftsmanship with honest,
+        reliable service you can count on.
+      </p>
+      <div class="hero-btns">
+        <a href="/services.html" class="btn btn-primary">View Our Services</a>
+        <a href="/about.html" class="btn btn-secondary">Learn More About Us</a>
+      </div>
+      <div class="hero-badge">
+        <span class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span><strong>5 stars</strong> &mdash; Highly rated on Google Reviews</span>
+      </div>
+    </div>
+
+    <div class="hero-panel">
+      <p class="panel-title">Get a Free Quote</p>
+      <p class="panel-sub">Tell us about your project and we&rsquo;ll be in touch shortly.</p>
+      <!--
+        PRODUCTION: Replace this block with the JobTread form embed:
+        <form class="jtwf" data-jobtread-web-form="true"
+              data-key="22TMX5ELJYY8RnHb2EbEahVpnuy7dRWt2q"
+              data-success-message="Thank you! We'll be in touch shortly.">
+          ... (full form HTML from WordPress export)
+        </form>
+        <script async src="https://app.jobtread.com/web-form.js"></script>
+      -->
+      <div class="form-ph">
+        <strong>JobTread Quote Form</strong>
+        Paste the JobTread embed here.<br>
+        Form key: <code>22TMX5ELJYY8RnHb2EbEahVpnuy7dRWt2q</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-sec">
+  <div class="container">
+    <div class="sec-header">
+      <p class="eyebrow">What We Do</p>
+      <h2 class="section-title">Our Core Services</h2>
+    </div>
+    <div class="services-grid">
+
+      <div class="svc-card">
+        <div class="svc-img ph">
+          <span class="ph-label">Service Image</span>
+          <span class="ph-file">Core-services-Custom-Home-Building.webp</span>
+        </div>
+        <div class="svc-body">
+          <div class="svc-icon">&#127968;</div>
+          <h3 class="svc-title">Home Building</h3>
+          <p class="svc-desc">Functional layouts and beautiful finishes tailored to your lifestyle and needs.</p>
+          <a href="/services/new-home-build.html" class="btn btn-secondary" style="font-size:13px;width:fit-content;">Learn More &rarr;</a>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-img ph">
+          <span class="ph-label">Service Image</span>
+          <span class="ph-file">Core-services-Remodeling.webp</span>
+        </div>
+        <div class="svc-body">
+          <div class="svc-icon">&#128296;</div>
+          <h3 class="svc-title">Remodeling</h3>
+          <p class="svc-desc">Transform unused space into a comfortable, functional extension of your home.</p>
+          <a href="/services/remodeling.html" class="btn btn-secondary" style="font-size:13px;width:fit-content;">Learn More &rarr;</a>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-img ph">
+          <span class="ph-label">Service Image</span>
+          <span class="ph-file">Core-services-Decks-Outdoor-Living.webp</span>
+        </div>
+        <div class="svc-body">
+          <div class="svc-icon">&#127794;</div>
+          <h3 class="svc-title">Decks &amp; Outdoor Living</h3>
+          <p class="svc-desc">Custom-built decks designed for durability, style, and outdoor enjoyment.</p>
+          <a href="/services/decks-outdoor.html" class="btn btn-secondary" style="font-size:13px;width:fit-content;">Learn More &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-sec">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <p class="eyebrow">Who We Are</p>
+        <h2 class="section-title">Know About Molitor Construction</h2>
+        <p class="section-sub">Local Experience. Quality Craftsmanship.</p>
+        <p class="about-body-text">
+          With years of hands-on experience, Molitor Construction delivers reliable service
+          and exceptional results. From remodeling projects to full custom builds, we bring
+          your vision to life with attention to detail and a commitment to doing things right.
+        </p>
+        <ul class="check-list">
+          <li><span class="chk">&#10003;</span> Years of hands-on construction experience</li>
+          <li><span class="chk">&#10003;</span> Experienced in remodeling &amp; new construction projects</li>
+          <li><span class="chk">&#10003;</span> Specialized in custom decks and outdoor living spaces</li>
+          <li><span class="chk">&#10003;</span> Locally trusted with a strong reputation for quality work</li>
+          <li><span class="chk">&#10003;</span> Personalized solutions tailored to each homeowner</li>
+        </ul>
+        <a href="/about.html" class="btn btn-primary">Know More About Us</a>
+        <div class="cert-row">
+          <div class="cert-badge">
+            Fiberon Certified
+            <small>Fiberon-Certified.webp</small>
+          </div>
+          <div class="cert-badge">
+            Deckorators Certified
+            <small>Deckorators-Certified.webp</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Before/After slider -->
+      <div class="ba" data-ba>
+        <div class="ba-after ph" style="position:absolute;inset:0;border-radius:0;border:none;background:linear-gradient(140deg,#7A9E80,#56805A)">
+          <span class="ph-label">After Photo</span>
+          <span class="ph-file">image-13-after.webp</span>
+        </div>
+        <div class="ba-before ph" style="position:absolute;inset:0;border-radius:0;border:none;background:linear-gradient(140deg,#A89E90,#8A7E72)">
+          <span class="ph-label">Before Photo</span>
+          <span class="ph-file">image-13-before.webp</span>
+        </div>
+        <div class="ba-lbl"><span>Before</span><span>After</span></div>
+        <div class="ba-line" data-ba-line></div>
+        <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Slide to compare before and after">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE REVIEWS -->
+<section class="reviews-sec">
+  <div class="container">
+    <div class="sec-header">
+      <p class="eyebrow">Reviews &amp; Rating</p>
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-sub">Top Rated Remodeling and Construction Service</p>
+    </div>
+
+    <!--
+      PRODUCTION: Replace this grid with the Trustindex widget embed:
+      <div class="trustindex-widget" ...></div>
+      <script src="https://cdn.trustindex.io/loader.js?exclusive" defer></script>
+      Or: set up a free Trustindex account at trustindex.io and paste their code here.
+    -->
+    <div class="reviews-grid">
+      <div class="rv-card">
+        <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rv-text">"Molitor Construction did an amazing job on our deck. Excellent craftsmanship, finished on time, and the quality speaks for itself. Highly recommend."</p>
+        <div class="rv-author">
+          <div class="rv-av">JD</div>
+          <div><div class="rv-name">John D.</div><div class="rv-date">Google Review</div></div>
+        </div>
+      </div>
+      <div class="rv-card">
+        <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rv-text">"We had our kitchen completely remodeled and the team was professional, clean, and communicative throughout. The result exceeded our expectations."</p>
+        <div class="rv-author">
+          <div class="rv-av">SM</div>
+          <div><div class="rv-name">Sarah M.</div><div class="rv-date">Google Review</div></div>
+        </div>
+      </div>
+      <div class="rv-card">
+        <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rv-text">"Fair pricing, quality work, and they stand behind what they build. Transformed our basement into a beautiful living space. Will absolutely use again."</p>
+        <div class="rv-author">
+          <div class="rv-av">TK</div>
+          <div><div class="rv-name">Tom K.</div><div class="rv-date">Google Review</div></div>
+        </div>
+      </div>
+    </div>
+    <p class="reviews-note">Live Google reviews load here via the Trustindex widget in production.</p>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <div></div><!-- left — blank for diagonal visual split -->
+    <div class="cta-right">
+      <p class="cta-eyebrow">Ready to Start Your Project?</p>
+      <h2 class="cta-h2">Let&rsquo;s build something great together.</h2>
+      <p class="cta-body">From remodeling to full-scale new construction, Molitor Construction delivers dependable craftsmanship built to last.</p>
+      <div class="cta-btns">
+        <a href="/contact.html" class="btn btn-primary">Contact Molitor Construction</a>
+        <a href="tel:+16086175283" class="btn btn-ghost-white">Call Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY TICKER -->
+<section class="gallery-sec">
+  <div class="container gallery-inner">
+    <div>
+      <p class="eyebrow">Our Work</p>
+      <h2 class="section-title">See Our Work in Action</h2>
+      <p class="section-sub">Quality Builds, Satisfied Clients</p>
+      <p class="gallery-body">Take a look at some of our recent projects — from custom decks and outdoor living spaces to full interior remodels. Every project is built with attention to detail, quality materials, and craftsmanship you can trust.</p>
+      <div class="rating-pill">
+        <span class="rating-num">5.0</span>
+        <div>
+          <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="rating-lbl">5 Star Rated Construction Company</div>
+        </div>
+      </div>
+      <a href="/gallery.html" class="btn btn-primary">Browse Happy Home Gallery</a>
+    </div>
+
+    <!-- Ticker: scrolls up -->
+    <div class="ticker-col">
+      <div class="ticker-track">
+        <div class="ticker-img ph"><span class="ph-file">image-ticker-1.webp</span></div>
+        <div class="ticker-img ph"><span class="ph-file">image-ticker-2.webp</span></div>
+        <div class="ticker-img ph"><span class="ph-file">image-ticker-3.webp</span></div>
+        <!-- duplicate for seamless loop -->
+        <div class="ticker-img ph"><span class="ph-file">image-ticker-1.webp</span></div>
+        <div class="ticker-img ph"><span class="ph-file">image-ticker-2.webp</span></div>
+        <div class="ticker-img ph"><span class="ph-file">image-ticker-3.webp</span></div>
+      </div>
+    </div>
+
+    <!-- Ticker: scrolls down -->
+    <div class="ticker-col">
+      <div class="ticker-track">
+        <div class="ticker-img ph"><span class="ph-file">image-ticker-4.webp</span></div>
+        <div class="ticker-img ph"><span class="ph-file">image-ticker-5.webp</span></div>
+        <div class="ticker-img ph"><span class="ph-file">image-ticker-6.webp</span></div>
+        <!-- duplicate -->
+        <div class="ticker-img ph"><span class="ph-file">image-ticker-4.webp</span></div>
+        <div class="ticker-img ph"><span class="ph-file">image-ticker-5.webp</span></div>
+        <div class="ticker-img ph"><span class="ph-file">image-ticker-6.webp</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE & AFTER SECTION -->
+<section class="ba-sec">
+  <div class="container">
+    <div class="sec-header">
+      <p class="eyebrow">Compare</p>
+      <h2 class="section-title">Before &amp; After Transformations</h2>
+      <p class="section-sub">Quality Builds, Satisfied Clients</p>
+    </div>
+    <p class="ba-intro">See the difference quality craftsmanship makes. We take outdated spaces and transform them into functional, beautiful areas designed for everyday living.</p>
+    <div class="ba-grid">
+
+      <div class="ba" data-ba>
+        <div class="ba-after ph" style="position:absolute;inset:0;border-radius:0;border:none;background:linear-gradient(140deg,#7A9E80,#56805A)">
+          <span class="ph-label">After</span><span class="ph-file">image-12-after.webp</span>
+        </div>
+        <div class="ba-before ph" style="position:absolute;inset:0;border-radius:0;border:none;background:linear-gradient(140deg,#B0A090,#907060)">
+          <span class="ph-label">Before</span><span class="ph-file">image-12-before.webp</span>
+        </div>
+        <div class="ba-lbl"><span>Before</span><span>After</span></div>
+        <div class="ba-line" data-ba-line></div>
+        <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+      </div>
+
+      <div class="ba" data-ba>
+        <div class="ba-after ph" style="position:absolute;inset:0;border-radius:0;border:none;background:linear-gradient(140deg,#7A9EA8,#4A7A90)">
+          <span class="ph-label">After</span><span class="ph-file">image-13-after.webp</span>
+        </div>
+        <div class="ba-before ph" style="position:absolute;inset:0;border-radius:0;border:none;background:linear-gradient(140deg,#A8A090,#806858)">
+          <span class="ph-label">Before</span><span class="ph-file">image-13-before.webp</span>
+        </div>
+        <div class="ba-lbl"><span>Before</span><span>After</span></div>
+        <div class="ba-line" data-ba-line></div>
+        <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <div class="container">
+    <p class="eyebrow" style="text-align:center;margin-bottom:6px;">Start Your Project</p>
+    <h2 class="section-title" style="text-align:center;margin-bottom:22px;">Have a Remodeling or Construction Project in Mind?</h2>
+    <div class="bottom-cta-btns">
+      <a href="/contact.html" class="btn btn-primary">Request a Quote</a>
+      <a href="tel:+16086175283" class="btn btn-secondary">Call +1 608-617-5283</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:2px;">
+          <div class="logo-mark" style="width:36px;height:36px;font-size:18px;">M</div>
+          <div>
+            <div class="ft-logo-name">Molitor Construction</div>
+            <div class="ft-logo-tag">Wisconsin Builder</div>
+          </div>
+        </div>
+        <p class="ft-tagline">Quality craftsmanship for remodeling and new construction projects across Wisconsin.</p>
+        <div class="ft-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">in</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="ft-heading">Quick Links</p>
+        <ul class="ft-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="ft-heading">Contact</p>
+        <div class="ft-contact-row">
+          <span>&#128222;</span>
+          <a href="tel:+16086175283">+1 608-617-5283</a>
+        </div>
+        <div class="ft-contact-row">
+          <span>&#9993;</span>
+          <a href="/contact.html">Send us a message</a>
+        </div>
+        <div class="ft-contact-row">
+          <span>&#128205;</span>
+          <span>Wisconsin</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bar">
+      <p>&copy; 2026 Molitor Construction. All rights reserved.</p>
+      <p>Built by the Molitor family</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Before/After sliders */
+document.querySelectorAll('[data-ba]').forEach(function(el) {
+  var range  = el.querySelector('.ba-range');
+  var before = el.querySelector('.ba-before');
+  var line   = el.querySelector('[data-ba-line]');
+
+  function update(v) {
+    before.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)';
+    line.style.left = v + '%';
+  }
+
+  range.addEventListener('input', function() { update(this.value); });
+  update(50);
+});
+</script>
