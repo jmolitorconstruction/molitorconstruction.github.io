@@ -23,9 +23,13 @@
 }
 .gallery-item:hover { transform: scale(1.02); box-shadow: 0 8px 24px rgba(15,42,68,0.14); }
 .gallery-item .ph { border-radius: 0; border: none; }
-.gallery-item:nth-child(3n+1) .ph { aspect-ratio: 4/3; }
-.gallery-item:nth-child(3n+2) .ph { aspect-ratio: 3/4; }
-.gallery-item:nth-child(3n)   .ph { aspect-ratio: 1/1; }
+.gallery-item:nth-child(3n+1) .ph,
+.gallery-item:nth-child(3n+1) img { aspect-ratio: 4/3; }
+.gallery-item:nth-child(3n+2) .ph,
+.gallery-item:nth-child(3n+2) img { aspect-ratio: 3/4; }
+.gallery-item:nth-child(3n) .ph,
+.gallery-item:nth-child(3n) img   { aspect-ratio: 1/1; }
+.gallery-item img { width: 100%; object-fit: cover; display: block; }
 .gallery-item .cat-badge {
   position: absolute;
   top: 10px; left: 10px;
@@ -120,15 +124,15 @@
       <div class="gallery-grid">
         <div class="gallery-item">
           <span class="cat-badge">Remodeling</span>
-          <div class="ph"><span class="ph-label">Project Photo</span><span class="ph-file">image-ticker-3.webp (Remodeling)</span></div>
+          <img src="/media/projects/photo-3.jpg" alt="Remodeling project" loading="lazy">
         </div>
         <div class="gallery-item">
           <span class="cat-badge">Remodeling</span>
-          <div class="ph"><span class="ph-label">Project Photo</span><span class="ph-file">remodeling-blurb2.webp</span></div>
+          <img src="/media/services/remodeling.jpg" alt="Remodeling project" loading="lazy">
         </div>
         <div class="gallery-item">
           <span class="cat-badge">Remodeling</span>
-          <div class="ph"><span class="ph-label">Project Photo</span><span class="ph-file">home-building-blurb.webp</span></div>
+          <img src="/media/services/home-building.jpg" alt="Home building project" loading="lazy">
         </div>
       </div>
     </div>
@@ -139,15 +143,15 @@
       <div class="gallery-grid">
         <div class="gallery-item">
           <span class="cat-badge">Bathroom</span>
-          <div class="ph"><span class="ph-label">Bathroom Photo</span><span class="ph-file">bathroom-project-1.webp</span></div>
+          <img src="/media/remodeling/bathroom-1.jpg" alt="Bathroom remodel" loading="lazy">
         </div>
         <div class="gallery-item">
           <span class="cat-badge">Master Bathroom</span>
-          <div class="ph"><span class="ph-label">Master Bathroom Photo</span><span class="ph-file">master-bathroom-1.webp</span></div>
+          <img src="/media/remodeling/bathroom-2.jpg" alt="Master bathroom remodel" loading="lazy">
         </div>
         <div class="gallery-item">
           <span class="cat-badge">Tile Work</span>
-          <div class="ph"><span class="ph-label">Tile Work Photo</span><span class="ph-file">tile-work-1.webp</span></div>
+          <img src="/media/remodeling/tile-work.jpg" alt="Custom tile work" loading="lazy">
         </div>
       </div>
     </div>
@@ -158,27 +162,27 @@
       <div class="gallery-grid">
         <div class="gallery-item">
           <span class="cat-badge">Decks</span>
-          <div class="ph"><span class="ph-label">Deck Project</span><span class="ph-file">image-ticker-1.webp</span></div>
+          <img src="/media/projects/photo-1.jpg" alt="Deck project" loading="lazy">
         </div>
         <div class="gallery-item">
           <span class="cat-badge">Decks</span>
-          <div class="ph"><span class="ph-label">Deck Project</span><span class="ph-file">image-ticker-2.webp</span></div>
+          <img src="/media/projects/photo-2.jpg" alt="Deck project" loading="lazy">
         </div>
         <div class="gallery-item">
           <span class="cat-badge">Decks</span>
-          <div class="ph"><span class="ph-label">Deck Project</span><span class="ph-file">image-ticker-4.webp</span></div>
+          <img src="/media/projects/photo-4.jpg" alt="Deck project" loading="lazy">
         </div>
         <div class="gallery-item">
           <span class="cat-badge">Decks</span>
-          <div class="ph"><span class="ph-label">Deck Project</span><span class="ph-file">image-ticker-5.webp</span></div>
+          <img src="/media/projects/photo-5.jpg" alt="Deck project" loading="lazy">
         </div>
         <div class="gallery-item">
           <span class="cat-badge">Decks</span>
-          <div class="ph"><span class="ph-label">Deck Project</span><span class="ph-file">image-ticker-6.webp</span></div>
+          <img src="/media/projects/photo-6.jpg" alt="Deck project" loading="lazy">
         </div>
         <div class="gallery-item">
           <span class="cat-badge">Decks</span>
-          <div class="ph"><span class="ph-label">Deck Project</span><span class="ph-file">image-ticker-3.webp</span></div>
+          <img src="/media/projects/photo-3.jpg" alt="Deck project" loading="lazy">
         </div>
       </div>
     </div>
@@ -189,15 +193,15 @@
       <div class="gallery-grid">
         <div class="gallery-item">
           <span class="cat-badge">Carpentry</span>
-          <div class="ph"><span class="ph-label">Carpentry Photo</span><span class="ph-file">carpentry-1.webp</span></div>
+          <img src="/media/remodeling/carpentry-1.jpg" alt="Finish carpentry" loading="lazy">
         </div>
         <div class="gallery-item">
           <span class="cat-badge">Carpentry</span>
-          <div class="ph"><span class="ph-label">Carpentry Photo</span><span class="ph-file">carpentry-2.webp</span></div>
+          <img src="/media/remodeling/carpentry-2.jpg" alt="Finish carpentry" loading="lazy">
         </div>
         <div class="gallery-item">
           <span class="cat-badge">Fireplace</span>
-          <div class="ph"><span class="ph-label">Fireplace Photo</span><span class="ph-file">Hees-Fireplace-1_full.webp</span></div>
+          <img src="/media/remodeling/fireplace.jpg" alt="Fireplace and feature wall" loading="lazy">
         </div>
       </div>
     </div>
@@ -207,22 +211,22 @@
       <h2>Before &amp; After</h2>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;">
         <div class="ba" data-ba>
-          <div class="ba-after ph" style="position:absolute;inset:0;border-radius:0;border:none;background:linear-gradient(140deg,#7A9E80,#56805A)">
-            <span class="ph-label">After</span><span class="ph-file">image-12-after.webp</span>
+          <div class="ba-after" style="position:absolute;inset:0;">
+            <img src="/media/before-after/pair-1-after.jpg" alt="After renovation">
           </div>
-          <div class="ba-before ph" style="position:absolute;inset:0;border-radius:0;border:none;background:linear-gradient(140deg,#B0A090,#907060)">
-            <span class="ph-label">Before</span><span class="ph-file">image-12-before.webp</span>
+          <div class="ba-before" style="position:absolute;inset:0;">
+            <img src="/media/before-after/pair-1-before.jpg" alt="Before renovation">
           </div>
           <div class="ba-lbl"><span>Before</span><span>After</span></div>
           <div class="ba-line" data-ba-line></div>
           <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Compare before and after">
         </div>
         <div class="ba" data-ba>
-          <div class="ba-after ph" style="position:absolute;inset:0;border-radius:0;border:none;background:linear-gradient(140deg,#7A9EA8,#4A7A90)">
-            <span class="ph-label">After</span><span class="ph-file">image-13-after.webp</span>
+          <div class="ba-after" style="position:absolute;inset:0;">
+            <img src="/media/before-after/pair-2-after.jpg" alt="After renovation">
           </div>
-          <div class="ba-before ph" style="position:absolute;inset:0;border-radius:0;border:none;background:linear-gradient(140deg,#A8A090,#806858)">
-            <span class="ph-label">Before</span><span class="ph-file">image-13-before.webp</span>
+          <div class="ba-before" style="position:absolute;inset:0;">
+            <img src="/media/before-after/pair-2-before.jpg" alt="Before renovation">
           </div>
           <div class="ba-lbl"><span>Before</span><span>After</span></div>
           <div class="ba-line" data-ba-line></div>
